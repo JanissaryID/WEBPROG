@@ -1,0 +1,11 @@
+body{
+    margin: 0; 
+    padding: 0;
+    /* Mereset ulang pading & margin ke 0,0 */
+}
+.Header{
+    height: 400px;
+    width: 100%;
+    
+
+}

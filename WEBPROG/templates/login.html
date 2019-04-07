@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <title>LOGIN</title>
+        <link rel = "icon" href = "../static/images/ftek.jpeg" type = "image/x-icon"/>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename='../static/css/login.css') }}"/> 
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" language="javascript" src="{{ url_for('static', filename='../static/js/login.js') }}"> </script>
+    </head>
+
+    <body>
+        <div id = "tombol-login">
+            <img src = "../static/images/iconLogin.png">
+        </div>
+
+        <div id = "login">
+            <h1>Log In</h1>
+            <span class = "tombol-keluar">
+                <img src = "images/closeLogin.png">
+            </span>
+            <form>
+                <input type = "text" name = "username" placeholder = "Username">
+                <input type = "password" name = "password" placeholder = "Password">
+                <a href = "#">Log In</a>
+                <div id = "remember-container">
+                    <input type = "checkbox" id = "cek" class = "check" checked>
+                    <span id = "remember">Remember Me</span>
+                    <span id = "forgotten">Forgotten</span>
+                </div>
+            </form>
+        </div>
+
+        <div id = "forgotten-container">
+            <h1>Forgotten</h1>
+            <span class = "tombol-keluar">
+                <img src = "images/closeLogin.png">
+            </span>
+
+            <form>
+                <input type = "text" name = "username" placeholder = "Username">
+                <a href = "#" class = "orange-btn">Get new password</a>
+            </form>
+        </div>
+    </body>
+</html>
