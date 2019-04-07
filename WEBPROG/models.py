@@ -8,7 +8,7 @@ class Admin(object):
         self.password=passw
     
     def cek(self):
-        if self.nama =='admin' and self.password =='admin':
+        if self.nama =='user' and self.password =='user':
             return True
         else:
             return False

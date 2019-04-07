@@ -3,19 +3,20 @@ from models import Admin
 
 app = Flask(__name__)
 
-@app.route('/login',methods=['GET','POST'])
+@app.route('/',methods=['GET','POST'])
 def index():
     modelAdmin = Admin()
 
     if request.method =='POST':
-        nama = request.form['username']
+        nama = request.form['nama']
         password = request.form['password']
         modelAdmin.setAdmin(nama,password)
         if modelAdmin.cek():
-            return redirect(mainform())
+            # print(nama + " "+ password)
+            return render_template('Mainform.html')
         else:
             return render_template('login.html')
-        # return 'selamat ' + nama +' dan ' + password
+        return 'selamat ' + nama +' dan ' + password
     else:
         return render_template('login.html',modelAdmin=modelAdmin)
 
